@@ -3,17 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/mycodingjounrey/Fine-Tuning-LLM-with-Unsloth/blob/main/phi_4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "HlZk4v3DAH-Q"
+        "id": "U8um7CwN-Yj8"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -31,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "oyL_OOA3AH-U"
+        "id": "dMo_ZRLb-YkB"
       },
       "source": [
         "### News"
@@ -40,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "n_IYROfZAH-V"
+        "id": "uO1IH7O_-YkC"
       },
       "source": [
         "Unsloth now supports Text-to-Speech (TTS) models. Read our [guide here](https://docs.unsloth.ai/basics/text-to-speech-tts-fine-tuning).\n",
@@ -53,7 +43,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "LS-rO3DAAH-V"
+        "id": "qA6UfHGD-YkC"
       },
       "source": [
         "### Installation"
@@ -63,7 +53,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "1aVSAauaAH-W"
+        "id": "sAdwpWmq-YkD"
       },
       "outputs": [],
       "source": [
@@ -81,7 +71,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "HPPGRMuKAH-X"
+        "id": "L1p0OVoA-YkF"
       },
       "source": [
         "### Unsloth"
@@ -1597,7 +1587,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "ippvJq2BAH-m"
+        "id": "yBNg-wcg-YkR"
       },
       "source": [
         "Now, use the `model-unsloth.gguf` file or `model-unsloth-Q4_K_M.gguf` file in llama.cpp or a UI based system like Jan or Open WebUI. You can install Jan [here](https://github.com/janhq/jan) and Open WebUI [here](https://github.com/open-webui/open-webui)\n",
@@ -1624,8 +1614,7 @@
     "accelerator": "GPU",
     "colab": {
       "gpuType": "T4",
-      "provenance": [],
-      "include_colab_link": true
+      "provenance": []
     },
     "kernelspec": {
       "display_name": "Python 3",
