@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "wmqjmEHqwSkH"
+        "id": "3J1dWlanVgjt"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "dzc2lM1dwSkL"
+        "id": "DfQVPxOqVgjw"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "yDI7M_dnwSkM"
+        "id": "SnI54Zy9Vgjx"
       },
       "source": [
         "Unsloth now supports Text-to-Speech (TTS) models. Read our [guide here](https://docs.unsloth.ai/basics/text-to-speech-tts-fine-tuning).\n",
@@ -43,7 +43,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "QNkFI_HfwSkM"
+        "id": "edF9cdhUVgjx"
       },
       "source": [
         "### Installation"
@@ -51,9 +51,9 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": null,
       "metadata": {
-        "id": "MBaz2Tu4wSkN"
+        "id": "CX05hrxTVgjy"
       },
       "outputs": [],
       "source": [
@@ -71,7 +71,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "oaTP46O5wSkN"
+        "id": "4W8KKSbyVgjz"
       },
       "source": [
         "### Unsloth"
@@ -1587,7 +1587,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "h5LI82qGwSkX"
+        "id": "Cz9276OdVgj-"
       },
       "source": [
         "Now, use the `model-unsloth.gguf` file or `model-unsloth-Q4_K_M.gguf` file in llama.cpp or a UI based system like Jan or Open WebUI. You can install Jan [here](https://github.com/janhq/jan) and Open WebUI [here](https://github.com/open-webui/open-webui)\n",
