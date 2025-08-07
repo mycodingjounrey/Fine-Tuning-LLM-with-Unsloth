@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "cjoSRGj6VJWH"
+        "id": "2XpeIyG6lCY2"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "BQxFWdGwVJWK"
+        "id": "ZaSVxshllCY5"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "TwLxfDwgVJWL"
+        "id": "zSGXFkUPlCY6"
       },
       "source": [
         "Unsloth now supports Text-to-Speech (TTS) models. Read our [guide here](https://docs.unsloth.ai/basics/text-to-speech-tts-fine-tuning).\n",
@@ -43,7 +43,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "q8RWjXw6VJWL"
+        "id": "PQs91AvNlCY6"
       },
       "source": [
         "### Installation"
@@ -53,7 +53,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "VG8A2-DLVJWM"
+        "id": "_h32PjHQlCY7"
       },
       "outputs": [],
       "source": [
@@ -64,14 +64,14 @@
         "else:\n",
         "    # Do this only in Colab notebooks! Otherwise use pip install unsloth\n",
         "    !pip install --no-deps bitsandbytes accelerate xformers==0.0.29.post3 peft trl triton cut_cross_entropy unsloth_zoo\n",
-        "    !pip install sentencepiece protobuf \"datasets>=3.4.1,<4.0.0\" huggingface_hub hf_transfer\n",
+        "    !pip install sentencepiece protobuf \"datasets>=3.4.1,<4.0.0\" \"huggingface_hub>=0.34.0\" hf_transfer\n",
         "    !pip install --no-deps unsloth"
       ]
     },
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "5IWiFcXTVJWN"
+        "id": "_czUFr20lCY8"
       },
       "source": [
         "### Unsloth"
@@ -1587,7 +1587,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "e4p35qcNVJWX"
+        "id": "XEPejg-MlCZG"
       },
       "source": [
         "Now, use the `model-unsloth.gguf` file or `model-unsloth-Q4_K_M.gguf` file in llama.cpp or a UI based system like Jan or Open WebUI. You can install Jan [here](https://github.com/janhq/jan) and Open WebUI [here](https://github.com/open-webui/open-webui)\n",
