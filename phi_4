@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "e-wWpPrCAFxU"
+        "id": "3hDf0VDQxm88"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "F5YRICuwAFxY"
+        "id": "emhdpJDfxm9A"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "mzU3ua37AFxZ"
+        "id": "BnyAnIqlxm9B"
       },
       "source": [
         "**NEW** Unsloth now supports training the new **gpt-oss** model from OpenAI! You can start finetune gpt-oss for free with our **[Colab notebook](https://x.com/UnslothAI/status/1953896997867729075)**!\n",
@@ -45,7 +45,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "w0kFOZBoAFxZ"
+        "id": "ZOkU96HHxm9B"
       },
       "source": [
         "### Installation"
@@ -55,7 +55,7 @@
       "cell_type": "code",
       "execution_count": 1,
       "metadata": {
-        "id": "Z4wBScSxAFxa"
+        "id": "a3_SUzq_xm9C"
       },
       "outputs": [],
       "source": [
@@ -73,7 +73,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "A6A1accFAFxb"
+        "id": "rbpC-iitxm9D"
       },
       "source": [
         "### Unsloth"
@@ -1589,7 +1589,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "USjTOvMVAFxo"
+        "id": "Y_QeeEZrxm9T"
       },
       "source": [
         "Now, use the `model-unsloth.gguf` file or `model-unsloth-Q4_K_M.gguf` file in llama.cpp or a UI based system like Jan or Open WebUI. You can install Jan [here](https://github.com/janhq/jan) and Open WebUI [here](https://github.com/open-webui/open-webui)\n",
