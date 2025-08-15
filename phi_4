@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "3hDf0VDQxm88"
+        "id": "ZcBL1JJWOn0K"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "emhdpJDfxm9A"
+        "id": "cbWXdlvOOn0N"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "BnyAnIqlxm9B"
+        "id": "Mqbs7E2uOn0O"
       },
       "source": [
         "**NEW** Unsloth now supports training the new **gpt-oss** model from OpenAI! You can start finetune gpt-oss for free with our **[Colab notebook](https://x.com/UnslothAI/status/1953896997867729075)**!\n",
@@ -45,7 +45,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "ZOkU96HHxm9B"
+        "id": "rKd0JgitOn0O"
       },
       "source": [
         "### Installation"
@@ -53,9 +53,9 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": null,
       "metadata": {
-        "id": "a3_SUzq_xm9C"
+        "id": "IXVGVsf0On0P"
       },
       "outputs": [],
       "source": [
@@ -73,7 +73,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "rbpC-iitxm9D"
+        "id": "cRassmU2On0Q"
       },
       "source": [
         "### Unsloth"
@@ -793,7 +793,7 @@
       "source": [
         "<a name=\"Train\"></a>\n",
         "### Train the model\n",
-        "Now let's use Huggingface TRL's `SFTTrainer`! More docs here: [TRL SFT docs](https://huggingface.co/docs/trl/sft_trainer). We do 60 steps to speed things up, but you can set `num_train_epochs=1` for a full run, and turn off `max_steps=None`. We also support TRL's `DPOTrainer`!"
+        "Now let's train our model. We do 60 steps to speed things up, but you can set `num_train_epochs=1` for a full run, and turn off `max_steps=None`. We also support TRL's `DPOTrainer`!"
       ]
     },
     {
@@ -1589,10 +1589,10 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "Y_QeeEZrxm9T"
+        "id": "iepXmCKHOn0c"
       },
       "source": [
-        "Now, use the `model-unsloth.gguf` file or `model-unsloth-Q4_K_M.gguf` file in llama.cpp or a UI based system like Jan or Open WebUI. You can install Jan [here](https://github.com/janhq/jan) and Open WebUI [here](https://github.com/open-webui/open-webui)\n",
+        "Now, use the `model-unsloth.gguf` file or `model-unsloth-Q4_K_M.gguf` file in llama.cpp.\n",
         "\n",
         "And we're done! If you have any questions on Unsloth, we have a [Discord](https://discord.gg/unsloth) channel! If you find any bugs or want to keep updated with the latest LLM stuff, or need help, join projects etc, feel free to join our Discord!\n",
         "\n",
