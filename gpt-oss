@@ -94,28 +94,9 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "QmUBVEnvCDJv",
-        "outputId": "e2ebdae4-aaa5-45e5-94b6-87abc6cc945f"
+        "id": "QmUBVEnvCDJv"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.\n",
-            "🦥 Unsloth Zoo will now patch everything to make training faster!\n",
-            "==((====))==  Unsloth 2025.8.9: Fast Gpt_Oss patching. Transformers: 4.56.0.dev0.\n",
-            "   \\\\   /|    Tesla T4. Num GPUs = 1. Max memory: 14.741 GB. Platform: Linux.\n",
-            "O^O/ \\_/ \\    Torch: 2.8.0+cu126. CUDA: 7.5. CUDA Toolkit: 12.6. Triton: 3.4.0\n",
-            "\\        /    Bfloat16 = FALSE. FA [Xformers = None. FA2 = False]\n",
-            " \"-____-\"     Free license: http://github.com/unslothai/unsloth\n",
-            "Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!\n"
-          ]
-        }
-      ],
+      "outputs": [],
       "source": [
         "from unsloth import FastLanguageModel\n",
         "import torch\n",
@@ -308,21 +289,22 @@
       },
       "outputs": [],
       "source": [
-        "from datasets import load_dataset\n",
+        "import pandas as pd\n",
+        "from datasets import Dataset\n",
         "\n",
-        "# Load a sample instruction dataset\n",
-        "dataset = load_dataset(\"databricks/databricks-dolly-15k\", split=\"train[:1000]\")  # take 1000 rows for speed\n",
+        "# Replace this with your filename after uploading\n",
+        "df = pd.read_csv(\"your_dataset.csv\")\n",
         "\n",
-        "# Convert each row into the Unsloth format\n",
-        "def format_row(example):\n",
-        "    instruction = example[\"instruction\"]\n",
-        "    input_text = example.get(\"context\", \"\")\n",
-        "    output = example[\"response\"]\n",
+        "# Convert into Unsloth format\n",
+        "def format_row(row):\n",
+        "    instruction = row[\"instruction\"]\n",
+        "    input_text = row.get(\"input\", \"\")\n",
+        "    output = row[\"output\"]\n",
         "    return {\n",
         "        \"prompt\": f\"### Instruction:\\n{instruction}\\n\\n### Input:\\n{input_text}\\n\\n### Response:\\n{output}\"\n",
         "    }\n",
         "\n",
-        "dataset = dataset.map(format_row)\n"
+        "dataset = Dataset.from_list([format_row(row) for _, row in df.iterrows()])\n"
       ]
     },
     {
