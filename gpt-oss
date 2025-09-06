@@ -33,6 +33,17 @@
         "id": "a5mojalInVgc"
       },
       "source": [
+        "\n",
+        "🎉 **News!** Google Colab now has A100 80GB GPUs available. Train massive models faster than ever! We've prepared several notebooks to get you started right away:\n",
+        "\n",
+        "* **[gpt-oss 120B](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/gpt-oss-(120B)_A100-Fine-tuning.ipynb)**\n",
+        "\n",
+        "* **[Llama 3.3 70B](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.3_(70B)_A100-Conversational.ipynb)**\n",
+        "\n",
+        "* **[Gemma 3 27B](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Gemma3_(27B)_A100-Conversational.ipynb)**\n",
+        "\n",
+        "* **[Qwen 3 32B](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Qwen3_(32B)_A100-Reasoning-Conversational.ipynb)**\n",
+        "\n",
         "**NEW** Unsloth now supports training the new **gpt-oss** model from OpenAI! You can start finetune gpt-oss for free with our **[Colab notebook](https://x.com/UnslothAI/status/1953896997867729075)**!\n",
         "\n",
         "Unsloth now supports Text-to-Speech (TTS) models. Read our [guide here](https://docs.unsloth.ai/basics/text-to-speech-tts-fine-tuning).\n",
