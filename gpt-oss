@@ -974,7 +974,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "SR-DalwoJnPE"
+        "id": "pwvEMGK6S3Ae"
       },
       "source": [
         "We also use Unsloth's `train_on_completions` method to only train on the assistant outputs and ignore the loss on the user's inputs. This helps increase accuracy of finetunes and lower loss as well!"
@@ -984,7 +984,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "57ClGSzlJnPE"
+        "id": "hXPewG0gS3Ae"
       },
       "outputs": [],
       "source": [
@@ -1001,7 +1001,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "0mLJOw8_JnPE"
+        "id": "fyIQm2fwS3Ae"
       },
       "source": [
         "Let's verify masking the instruction part is done! Let's print the 100th row again."
@@ -1011,7 +1011,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "qFO6VNi1JnPE"
+        "id": "LH4mlVP-S3Ae"
       },
       "outputs": [],
       "source": [
@@ -1021,7 +1021,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "zgKWBF7DJnPE"
+        "id": "Tzb7UfC-S3Af"
       },
       "source": [
         "Now let's print the masked out example - you should see only the answer is present:"
@@ -1031,7 +1031,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "5xQwMmQ-JnPE"
+        "id": "NlsttyoPS3Af"
       },
       "outputs": [],
       "source": [
@@ -1042,8 +1042,8 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "Tn_8m93vJnPE",
-        "outputId": "23079253-3eff-4c94-9feb-8f454ddd1417"
+        "id": "P27uOqTFS3Af",
+        "outputId": "28caa79c-da2c-4f0a-e0c3-753bebc179bd"
       },
       "outputs": [
         {
@@ -1067,7 +1067,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "PQt9HSqnJnPF"
+        "id": "ulgf8NtZS3Af"
       },
       "source": [
         "Let's train the model! To resume a training run, set `trainer.train(resume_from_checkpoint = True)`"
@@ -1448,7 +1448,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "oTQwCSfCJnPJ"
+        "id": "frM6iMSDS3Ak"
       },
       "source": [
         "### Saving to float16 for VLLM or mxfp4\n",
@@ -1460,7 +1460,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "_5aipS_WJnPJ"
+        "id": "GR7CM-51S3Ak"
       },
       "outputs": [],
       "source": [
