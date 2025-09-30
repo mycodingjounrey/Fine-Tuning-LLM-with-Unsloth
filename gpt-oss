@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "I7b-_oJyMix6"
+        "id": "BI4GFTGqV0Zk"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "tnN1zyx4Mix-"
+        "id": "bnC3Z9VbV0Zp"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "mQ_EOQE2Mix_"
+        "id": "Rh7zEo28V0Zq"
       },
       "source": [
         "\n",
@@ -48,7 +48,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "-EMo1SspMix_"
+        "id": "S03Vq173V0Zq"
       },
       "source": [
         "### Installation"
@@ -56,9 +56,9 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 1,
       "metadata": {
-        "id": "41C3mXjiMiyA"
+        "id": "iPTClKogV0Zr"
       },
       "outputs": [],
       "source": [
@@ -66,7 +66,6 @@
         "!pip install --upgrade -qqq uv\n",
         "try: import numpy; get_numpy = f\"numpy=={numpy.__version__}\"\n",
         "except: get_numpy = \"numpy\"\n",
-        "!uv pip install -qqq --upgrade --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128\n",
         "!uv pip install -qqq \\\n",
         "    \"torch>=2.8.0\" \"triton>=3.4.0\" {get_numpy} torchvision bitsandbytes \"transformers>=4.55.3\" \\\n",
         "    \"unsloth_zoo[base] @ git+https://github.com/unslothai/unsloth-zoo\" \\\n",
@@ -974,7 +973,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "aiOeiY_rMiyG"
+        "id": "3LVZ3dYBV0Zx"
       },
       "source": [
         "We also use Unsloth's `train_on_completions` method to only train on the assistant outputs and ignore the loss on the user's inputs. This helps increase accuracy of finetunes and lower loss as well!"
@@ -984,7 +983,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "e4FuUBFCMiyG"
+        "id": "JWO2sLqbV0Zx"
       },
       "outputs": [],
       "source": [
@@ -1001,7 +1000,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "76lxtskSMiyG"
+        "id": "-QoVs8CXV0Zx"
       },
       "source": [
         "Let's verify masking the instruction part is done! Let's print the 100th row again."
@@ -1011,7 +1010,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "79UsMhLHMiyG"
+        "id": "zOyele1YV0Zx"
       },
       "outputs": [],
       "source": [
@@ -1021,7 +1020,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "FH_iSbiZMiyG"
+        "id": "ZxvMD3s5V0Zx"
       },
       "source": [
         "Now let's print the masked out example - you should see only the answer is present:"
@@ -1031,7 +1030,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "5_UcPfPLMiyH"
+        "id": "-GnRgkPOV0Zx"
       },
       "outputs": [],
       "source": [
@@ -1042,8 +1041,8 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "IQ_qc3NKMiyH",
-        "outputId": "8109fd5c-89c5-4175-c5d9-ece96f775912"
+        "id": "6qOANNlFV0Zx",
+        "outputId": "73aa8601-3bda-4d05-f5e7-cc70ae652233"
       },
       "outputs": [
         {
@@ -1067,7 +1066,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "HInlaYm0MiyH"
+        "id": "DRxMHMqSV0Zy"
       },
       "source": [
         "Let's train the model! To resume a training run, set `trainer.train(resume_from_checkpoint = True)`"
@@ -1448,7 +1447,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "LZaer_j_MiyQ"
+        "id": "uNmutM8-V0Z4"
       },
       "source": [
         "### Saving to float16 for VLLM or mxfp4\n",
@@ -1460,7 +1459,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "LSkmU9E7MiyQ"
+        "id": "AwfQANMDV0Z5"
       },
       "outputs": [],
       "source": [
