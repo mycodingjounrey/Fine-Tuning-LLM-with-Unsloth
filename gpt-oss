@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "BI4GFTGqV0Zk"
+        "id": "rYnLiue-xNP4"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "bnC3Z9VbV0Zp"
+        "id": "nO0cUAMkxNQB"
       },
       "source": [
         "### News"
@@ -30,15 +30,15 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "Rh7zEo28V0Zq"
+        "id": "wKdWNTuIxNQC"
       },
       "source": [
         "\n",
-        "Unsloth now supports [gpt-oss RL](https://docs.unsloth.ai/new/gpt-oss-reinforcement-learning) with the fastest inference & lowest VRAM. Try our [new notebook](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/gpt-oss-(20B)-GRPO.ipynb) which automatically creates kernels!\n",
+        "Unsloth's [Docker image](https://hub.docker.com/r/unsloth/unsloth) is here! Start training with no setup & environment issues. [Read our Guide](https://docs.unsloth.ai/new/how-to-train-llms-with-unsloth-and-docker).\n",
         "\n",
-        "[Vision RL](https://docs.unsloth.ai/new/vision-reinforcement-learning-vlm-rl) is now supported! Train Qwen2.5-VL, Gemma 3 etc. with GSPO or GRPO.\n",
+        "[gpt-oss RL](https://docs.unsloth.ai/new/gpt-oss-reinforcement-learning) is now supported with the fastest inference & lowest VRAM. Try our [new notebook](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/gpt-oss-(20B)-GRPO.ipynb) which creates kernels!\n",
         "\n",
-        "Introducing Unsloth [Standby for RL](https://docs.unsloth.ai/basics/memory-efficient-rl): GRPO is now faster, uses 30% less memory with 2x longer context.\n",
+        "Introducing [Vision](https://docs.unsloth.ai/new/vision-reinforcement-learning-vlm-rl) and [Standby](https://docs.unsloth.ai/basics/memory-efficient-rl) for RL! Train Qwen, Gemma etc. VLMs with GSPO - even faster with less VRAM.\n",
         "\n",
         "Unsloth now supports Text-to-Speech (TTS) models. Read our [guide here](https://docs.unsloth.ai/basics/text-to-speech-tts-fine-tuning).\n",
         "\n",
@@ -48,7 +48,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "S03Vq173V0Zq"
+        "id": "JgeEgx3VxNQC"
       },
       "source": [
         "### Installation"
@@ -56,9 +56,9 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": null,
       "metadata": {
-        "id": "iPTClKogV0Zr"
+        "id": "QG5A9nKbxNQD"
       },
       "outputs": [],
       "source": [
@@ -525,7 +525,7 @@
         "    return_tensors = \"pt\",\n",
         "    return_dict = True,\n",
         "    reasoning_effort = \"low\", # **NEW!** Set reasoning effort to low, medium or high\n",
-        ").to(model.device)\n",
+        ").to(\"cuda\")\n",
         "\n",
         "_ = model.generate(**inputs, max_new_tokens = 64, streamer = TextStreamer(tokenizer))"
       ]
@@ -579,7 +579,7 @@
         "    return_tensors = \"pt\",\n",
         "    return_dict = True,\n",
         "    reasoning_effort = \"medium\", # **NEW!** Set reasoning effort to low, medium or high\n",
-        ").to(model.device)\n",
+        ").to(\"cuda\")\n",
         "\n",
         "_ = model.generate(**inputs, max_new_tokens = 64, streamer = TextStreamer(tokenizer))"
       ]
@@ -631,7 +631,7 @@
         "    return_tensors = \"pt\",\n",
         "    return_dict = True,\n",
         "    reasoning_effort = \"high\", # **NEW!** Set reasoning effort to low, medium or high\n",
-        ").to(model.device)\n",
+        ").to(\"cuda\")\n",
         "\n",
         "_ = model.generate(**inputs, max_new_tokens = 64, streamer = TextStreamer(tokenizer))"
       ]
@@ -973,7 +973,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "3LVZ3dYBV0Zx"
+        "id": "WmlzRZVNxNQS"
       },
       "source": [
         "We also use Unsloth's `train_on_completions` method to only train on the assistant outputs and ignore the loss on the user's inputs. This helps increase accuracy of finetunes and lower loss as well!"
@@ -983,7 +983,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "JWO2sLqbV0Zx"
+        "id": "fXt9pbemxNQS"
       },
       "outputs": [],
       "source": [
@@ -1000,7 +1000,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "-QoVs8CXV0Zx"
+        "id": "P74HkHG5xNQT"
       },
       "source": [
         "Let's verify masking the instruction part is done! Let's print the 100th row again."
@@ -1010,7 +1010,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "zOyele1YV0Zx"
+        "id": "7VMlsQ82xNQT"
       },
       "outputs": [],
       "source": [
@@ -1020,7 +1020,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "ZxvMD3s5V0Zx"
+        "id": "-6at3gztxNQU"
       },
       "source": [
         "Now let's print the masked out example - you should see only the answer is present:"
@@ -1030,7 +1030,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "-GnRgkPOV0Zx"
+        "id": "wJ0VAPk_xNQU"
       },
       "outputs": [],
       "source": [
@@ -1041,8 +1041,8 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "6qOANNlFV0Zx",
-        "outputId": "73aa8601-3bda-4d05-f5e7-cc70ae652233"
+        "id": "oARTYAmQxNQU",
+        "outputId": "230bb570-ab27-4c4e-bbdd-28c383cecf21"
       },
       "outputs": [
         {
@@ -1066,7 +1066,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "DRxMHMqSV0Zy"
+        "id": "-yzrF-MXxNQV"
       },
       "source": [
         "Let's train the model! To resume a training run, set `trainer.train(resume_from_checkpoint = True)`"
@@ -1350,7 +1350,7 @@
         "    return_tensors = \"pt\",\n",
         "    return_dict = True,\n",
         "    reasoning_effort = \"medium\",\n",
-        ").to(model.device)\n",
+        ").to(\"cuda\")\n",
         "from transformers import TextStreamer\n",
         "_ = model.generate(**inputs, max_new_tokens = 64, streamer = TextStreamer(tokenizer))"
       ]
@@ -1439,7 +1439,7 @@
         "    return_tensors = \"pt\",\n",
         "    return_dict = True,\n",
         "    reasoning_effort = \"high\",\n",
-        ").to(model.device)\n",
+        ").to(\"cuda\")\n",
         "from transformers import TextStreamer\n",
         "_ = model.generate(**inputs, max_new_tokens = 64, streamer = TextStreamer(tokenizer))"
       ]
@@ -1447,7 +1447,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "uNmutM8-V0Z4"
+        "id": "hjCY_3_nxNQe"
       },
       "source": [
         "### Saving to float16 for VLLM or mxfp4\n",
@@ -1459,7 +1459,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "AwfQANMDV0Z5"
+        "id": "YvPfl1v0xNQf"
       },
       "outputs": [],
       "source": [
