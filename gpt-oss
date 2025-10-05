@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "rYnLiue-xNP4"
+        "id": "ZDfEpMRoFmGS"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "nO0cUAMkxNQB"
+        "id": "3sFlXreDFmGW"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "wKdWNTuIxNQC"
+        "id": "sdR7Lm4DFmGX"
       },
       "source": [
         "\n",
@@ -48,7 +48,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "JgeEgx3VxNQC"
+        "id": "Gbi-zov5FmGY"
       },
       "source": [
         "### Installation"
@@ -58,7 +58,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "QG5A9nKbxNQD"
+        "id": "c9aVQKOKFmGY"
       },
       "outputs": [],
       "source": [
@@ -973,7 +973,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "WmlzRZVNxNQS"
+        "id": "fthrsutnFmGe"
       },
       "source": [
         "We also use Unsloth's `train_on_completions` method to only train on the assistant outputs and ignore the loss on the user's inputs. This helps increase accuracy of finetunes and lower loss as well!"
@@ -983,7 +983,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "fXt9pbemxNQS"
+        "id": "BQG6VGuOFmGe"
       },
       "outputs": [],
       "source": [
@@ -1000,7 +1000,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "P74HkHG5xNQT"
+        "id": "alahOjwuFmGf"
       },
       "source": [
         "Let's verify masking the instruction part is done! Let's print the 100th row again."
@@ -1010,7 +1010,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "7VMlsQ82xNQT"
+        "id": "6rw3PReBFmGf"
       },
       "outputs": [],
       "source": [
@@ -1020,7 +1020,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "-6at3gztxNQU"
+        "id": "ef6de-ndFmGf"
       },
       "source": [
         "Now let's print the masked out example - you should see only the answer is present:"
@@ -1030,7 +1030,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "wJ0VAPk_xNQU"
+        "id": "Xe_7hz6hFmGf"
       },
       "outputs": [],
       "source": [
@@ -1041,8 +1041,8 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "oARTYAmQxNQU",
-        "outputId": "230bb570-ab27-4c4e-bbdd-28c383cecf21"
+        "id": "N7oLNaqmFmGf",
+        "outputId": "ed422115-5ff6-427f-fa5d-e9a62bb9a04a"
       },
       "outputs": [
         {
@@ -1066,7 +1066,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "-yzrF-MXxNQV"
+        "id": "5C2mBn_4FmGf"
       },
       "source": [
         "Let's train the model! To resume a training run, set `trainer.train(resume_from_checkpoint = True)`"
@@ -1447,7 +1447,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "hjCY_3_nxNQe"
+        "id": "ev_m2oRJFmGm"
       },
       "source": [
         "### Saving to float16 for VLLM or mxfp4\n",
@@ -1459,18 +1459,18 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "YvPfl1v0xNQf"
+        "id": "xoDDp2WaFmGm"
       },
       "outputs": [],
       "source": [
         "# Merge and push to hub in mxfp4 4bit format\n",
         "if False:\n",
-        "    model.save_pretrained_merged(\"finetuned_model\", tokenizer, save_method=\"mxfp4\")\n",
-        "if False: model.push_to_hub_merged(\"repo_id/repo_name\", tokenizer, token=\"hf...\", save_method=\"mxfp4\")\n",
+        "    model.save_pretrained_merged(\"finetuned_model\", tokenizer, save_method = \"mxfp4\")\n",
+        "if False: model.push_to_hub_merged(\"repo_id/repo_name\", tokenizer, token = \"hf...\", save_method = \"mxfp4\")\n",
         "\n",
         "# Merge and push to hub in 16bit\n",
         "if False:\n",
-        "    model.save_pretrained_merged(\"finetuned_model\", tokenizer, save_method=\"merged_16bit\")\n",
+        "    model.save_pretrained_merged(\"finetuned_model\", tokenizer, save_method = \"merged_16bit\")\n",
         "if False: # Pushing to HF Hub\n",
         "    model.push_to_hub_merged(\"hf/gpt-oss-finetune\", tokenizer, save_method = \"merged_16bit\", token = \"\")"
       ]
