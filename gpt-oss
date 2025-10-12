@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "aPPWomNe_3uy"
+        "id": "V5Y8t6ciGBOc"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "1-BsAHFX_3u3"
+        "id": "YfPMBL_-GBOl"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "N31OAIff_3u4"
+        "id": "qMilzhIqGBOn"
       },
       "source": [
         "\n",
@@ -48,7 +48,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "DHjVanis_3u5"
+        "id": "xLZrA3iDGBOp"
       },
       "source": [
         "### Installation"
@@ -58,7 +58,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "PhiKEBxj_3u5"
+        "id": "FSPF3Io8GBOq"
       },
       "outputs": [],
       "source": [
@@ -973,7 +973,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "CYh7jfSy_3vC"
+        "id": "mMK5EuM8GBO9"
       },
       "source": [
         "We also use Unsloth's `train_on_completions` method to only train on the assistant outputs and ignore the loss on the user's inputs. This helps increase accuracy of finetunes and lower loss as well!"
@@ -983,7 +983,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "VMRv__lV_3vC"
+        "id": "b3eHqsISGBO9"
       },
       "outputs": [],
       "source": [
@@ -1000,7 +1000,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "1GSCdr8n_3vD"
+        "id": "f0VT-5P7GBO-"
       },
       "source": [
         "Let's verify masking the instruction part is done! Let's print the 100th row again."
@@ -1010,7 +1010,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "FmLhxC4h_3vD"
+        "id": "6alsEq4VGBO_"
       },
       "outputs": [],
       "source": [
@@ -1020,7 +1020,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "MxsXpzm4_3vD"
+        "id": "-wr-nB9qGBO_"
       },
       "source": [
         "Now let's print the masked out example - you should see only the answer is present:"
@@ -1030,7 +1030,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "txtaZoo3_3vD"
+        "id": "JWXB0_M8GBO_"
       },
       "outputs": [],
       "source": [
@@ -1041,8 +1041,8 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "FCmG4GKY_3vE",
-        "outputId": "b113f825-6ea3-43e9-ab58-ef81e413ca5a"
+        "id": "GGGzqBztGBO_",
+        "outputId": "1ab1ef0a-27ed-4a62-8747-f7126ae8327a"
       },
       "outputs": [
         {
@@ -1066,7 +1066,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "oDGlmyWF_3vE"
+        "id": "sQbYxjc6GBPB"
       },
       "source": [
         "Let's train the model! To resume a training run, set `trainer.train(resume_from_checkpoint = True)`"
@@ -1447,7 +1447,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "U3vdyJYH_3vL"
+        "id": "VgXOsBd9GBPO"
       },
       "source": [
         "### Saving to float16 for VLLM or mxfp4\n",
@@ -1459,7 +1459,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "92Xv43qU_3vM"
+        "id": "H0heqNKXGBPO"
       },
       "outputs": [],
       "source": [
