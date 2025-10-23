@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "L1KIjNbWpJyA"
+        "id": "yTS8PWpYxI4l"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "bMSylMtWpJyU"
+        "id": "i7j9KGltxI4n"
       },
       "source": [
         "### News"
@@ -30,7 +30,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "uDVgDXI8pJyU"
+        "id": "DGlSAdeFxI4n"
       },
       "source": [
         "\n",
@@ -48,7 +48,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "96bGHsYfpJyV"
+        "id": "5gFRLpCExI4o"
       },
       "source": [
         "### Installation"
@@ -58,7 +58,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "liXfgBOJpJyW"
+        "id": "IMD0hEV1xI4o"
       },
       "outputs": [],
       "source": [
@@ -976,7 +976,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "Wx03zQjRpJye"
+        "id": "LMQO7vqyxI4t"
       },
       "source": [
         "We also use Unsloth's `train_on_completions` method to only train on the assistant outputs and ignore the loss on the user's inputs. This helps increase accuracy of finetunes and lower loss as well!"
@@ -986,7 +986,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "0EcS0zcZpJye"
+        "id": "aorDpMhrxI4t"
       },
       "outputs": [],
       "source": [
@@ -1003,7 +1003,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "JipAAclVpJye"
+        "id": "NQ9_CQBPxI4u"
       },
       "source": [
         "Let's verify masking the instruction part is done! Let's print the 100th row again."
@@ -1013,7 +1013,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "_mJ3yxFkpJye"
+        "id": "xJ0_27C1xI4u"
       },
       "outputs": [],
       "source": [
@@ -1023,7 +1023,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "oScerM_ppJyf"
+        "id": "T_IWUaVxxI4u"
       },
       "source": [
         "Now let's print the masked out example - you should see only the answer is present:"
@@ -1033,7 +1033,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "x36PHEIOpJyf"
+        "id": "d1rXMxRrxI4u"
       },
       "outputs": [],
       "source": [
@@ -1044,8 +1044,8 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "5YlxUnHXpJyf",
-        "outputId": "d2fa59c7-c4b7-4540-ea3c-52fe28df5562"
+        "id": "hDxjdXgWxI4u",
+        "outputId": "8b35b48e-de32-4df5-e9b2-f978d56975ba"
       },
       "outputs": [
         {
@@ -1069,7 +1069,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "gf7Q5QpTpJyf"
+        "id": "oBS5XBuCxI4u"
       },
       "source": [
         "Let's train the model! To resume a training run, set `trainer.train(resume_from_checkpoint = True)`"
@@ -1450,7 +1450,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "Cc3XzyHFpJyn"
+        "id": "1FUA-REjxI47"
       },
       "source": [
         "### Saving to float16 for VLLM or mxfp4\n",
@@ -1462,7 +1462,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "B_Gh-NojpJyn"
+        "id": "NXjmplYrxI47"
       },
       "outputs": [],
       "source": [
@@ -1499,23 +1499,8 @@
         "\n",
         "  Join Discord if you need help + ⭐️ <i>Star us on <a href=\"https://github.com/unslothai/unsloth\">Github</a> </i> ⭐️\n",
         "</div>\n",
-        "And we're done! If you have any questions on Unsloth, we have a [Discord](https://discord.gg/unsloth) channel! If you find any bugs or want to keep updated with the latest LLM stuff, or need help, join projects etc, feel free to join our Discord!\n",
         "\n",
-        "Some other links:\n",
-        "1. Train your own reasoning model - Llama GRPO notebook [Free Colab](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.1_(8B)-GRPO.ipynb)\n",
-        "2. Saving finetunes to Ollama. [Free notebook](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3_(8B)-Ollama.ipynb)\n",
-        "3. Llama 3.2 Vision finetuning - Radiography use case. [Free Colab](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.2_(11B)-Vision.ipynb)\n",
-        "6. See notebooks for DPO, ORPO, Continued pretraining, conversational finetuning and more on our [documentation](https://docs.unsloth.ai/get-started/unsloth-notebooks)!\n",
-        "\n",
-        "<div class=\"align-center\">\n",
-        "  <a href=\"https://unsloth.ai\"><img src=\"https://github.com/unslothai/unsloth/raw/main/images/unsloth%20new%20logo.png\" width=\"115\"></a>\n",
-        "  <a href=\"https://discord.gg/unsloth\"><img src=\"https://github.com/unslothai/unsloth/raw/main/images/Discord.png\" width=\"145\"></a>\n",
-        "  <a href=\"https://docs.unsloth.ai/\"><img src=\"https://github.com/unslothai/unsloth/blob/main/images/documentation%20green%20button.png?raw=true\" width=\"125\"></a>\n",
-        "\n",
-        "  Join Discord if you need help + ⭐️ <i>Star us on <a href=\"https://github.com/unslothai/unsloth\">Github</a> </i> ⭐️\n",
-        "\n",
-        "  This notebook and all Unsloth notebooks are licensed [LGPL-3.0](https://github.com/unslothai/notebooks?tab=LGPL-3.0-1-ov-file#readme)\n",
-        "</div>\n"
+        "  This notebook and all Unsloth notebooks are licensed [LGPL-3.0](https://github.com/unslothai/notebooks?tab=LGPL-3.0-1-ov-file#readme).\n"
       ]
     }
   ],
