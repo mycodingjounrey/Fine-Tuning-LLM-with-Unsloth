@@ -3,7 +3,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "mTt7IS2LBfhT"
+        "id": "XSQ09CzdLwaS"
       },
       "source": [
         "To run this, press \"*Runtime*\" and press \"*Run all*\" on a **free** Tesla T4 Google Colab instance!\n",
@@ -21,7 +21,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "C_JuyZKUBfhW"
+        "id": "2ztI_2jWLwaW"
       },
       "source": [
         "### News"
@@ -30,9 +30,11 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "llkUpnzQBfhX"
+        "id": "zDj-GW-5LwaX"
       },
       "source": [
+        "\n",
+        "Introducing FP8 precision training for faster RL inference. [Read Blog](https://docs.unsloth.ai/new/fp8-reinforcement-learning).\n",
         "\n",
         "Unsloth's [Docker image](https://hub.docker.com/r/unsloth/unsloth) is here! Start training with no setup & environment issues. [Read our Guide](https://docs.unsloth.ai/new/how-to-train-llms-with-unsloth-and-docker).\n",
         "\n",
@@ -40,15 +42,13 @@
         "\n",
         "Introducing [Vision](https://docs.unsloth.ai/new/vision-reinforcement-learning-vlm-rl) and [Standby](https://docs.unsloth.ai/basics/memory-efficient-rl) for RL! Train Qwen, Gemma etc. VLMs with GSPO - even faster with less VRAM.\n",
         "\n",
-        "Unsloth now supports Text-to-Speech (TTS) models. Read our [guide here](https://docs.unsloth.ai/basics/text-to-speech-tts-fine-tuning).\n",
-        "\n",
         "Visit our docs for all our [model uploads](https://docs.unsloth.ai/get-started/all-our-models) and [notebooks](https://docs.unsloth.ai/get-started/unsloth-notebooks).\n"
       ]
     },
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "17uaKLOhBfhX"
+        "id": "_V0uDItZLwaX"
       },
       "source": [
         "### Installation"
@@ -58,7 +58,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "4UH0kHCTBfhX"
+        "id": "WWpjhUh8LwaY"
       },
       "outputs": [],
       "source": [
@@ -976,7 +976,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "s5m8K1IXBfhd"
+        "id": "0KtorQ7xLwai"
       },
       "source": [
         "We also use Unsloth's `train_on_completions` method to only train on the assistant outputs and ignore the loss on the user's inputs. This helps increase accuracy of finetunes and lower loss as well!"
@@ -986,7 +986,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "7ftBt8zrBfhd"
+        "id": "8-fQkDFdLwai"
       },
       "outputs": [],
       "source": [
@@ -1003,7 +1003,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "S1qUtKw7Bfhd"
+        "id": "_MBqwRklLwai"
       },
       "source": [
         "Let's verify masking the instruction part is done! Let's print the 100th row again."
@@ -1013,7 +1013,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "eakosAxPBfhd"
+        "id": "xQkGZflwLwai"
       },
       "outputs": [],
       "source": [
@@ -1023,7 +1023,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "aphApuskBfhe"
+        "id": "tw7SY7xlLwai"
       },
       "source": [
         "Now let's print the masked out example - you should see only the answer is present:"
@@ -1033,7 +1033,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "2DYeENdiBfhe"
+        "id": "EpXcDkwgLwai"
       },
       "outputs": [],
       "source": [
@@ -1044,8 +1044,8 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "ec8geDT2Bfhe",
-        "outputId": "a3a16b9f-4b20-42dd-d00f-eef3933c6367"
+        "id": "5wIiStAsLwaj",
+        "outputId": "68b8f8d1-b20e-467b-db3f-0f742a51d3f9"
       },
       "outputs": [
         {
@@ -1069,7 +1069,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "z-DSRsPQBfhe"
+        "id": "IjSP2LUrLwaj"
       },
       "source": [
         "Let's train the model! To resume a training run, set `trainer.train(resume_from_checkpoint = True)`"
@@ -1450,7 +1450,7 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "feM3ViVDBfhk"
+        "id": "ioY0HvlILwaq"
       },
       "source": [
         "### Saving to float16 for VLLM or mxfp4\n",
@@ -1462,7 +1462,7 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "juAzT6FvBfhk"
+        "id": "HtuV6Ib3Lwaq"
       },
       "outputs": [],
       "source": [
